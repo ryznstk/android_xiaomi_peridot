@@ -11,6 +11,9 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 # Device
 ro.product.mod_device=peridot_global
 
+# Logging
+persist.vendor.camera.logInfoMask=false
+
 # QTI
 ro.vendor.qti.va_aosp.support=1
 
