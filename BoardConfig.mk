@@ -117,6 +117,8 @@ BOARD_KERNEL_CMDLINE := \
     swinfo.fingerprint=peridot:$(LINEAGE_VERSION) \
     mtdoops.fingerprint=peridot:$(LINEAGE_VERSION)
 
+BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
+
 BOARD_BOOTCONFIG := \
     androidboot.console=0 \
     androidboot.hardware=qcom \
