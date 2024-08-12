@@ -132,6 +132,7 @@ BOARD_KERNEL_CMDLINE := \
     mtdoops.fingerprint=peridot:$(LINEAGE_VERSION)
 
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
+BOARD_KERNEL_CMDLINE += rcu_nocbs=all rcutree.enable_rcu_lazy=1
 
 BOARD_BOOTCONFIG := \
     androidboot.console=0 \
