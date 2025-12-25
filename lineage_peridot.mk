@@ -40,6 +40,12 @@ AXION_CAMERA_REAR_INFO := 50,8
 AXION_CAMERA_FRONT_INFO := 20
 AXION_MAINTAINER := BLU
 AXION_PROCESSOR := Snapdragon_8s_Gen_3
+AXION_CPU_SMALL_CORES := 0,1,2
+AXION_CPU_BIG_CORES := 3,4,5,6,7
+TARGET_INCLUDES_LOS_PREBUILTS := true
+GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
+GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+TARGET_NEEDS_DOZE_FIX := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.207.0.VNPMIXM release-keys" \
