@@ -37,9 +37,6 @@ echo "Cloning Viper4Android tree..."
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
-rm -rf system/sepolicy
-git clone -b bq1 https://github.com/droidcore/evo_system_sepolicy.git system/sepolicy
-
 # KProfiles (fresh clone)
 echo "Cloning KProfiles..."
 rm -rf packages/apps/KProfiles
@@ -55,12 +52,12 @@ echo "Cloning FastCharge..."
 rm -rf packages/apps/FastCharge
 
 # Refresh signing keys
-if [ -d vendor/evolution-priv/keys ]; then
+if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
-  rm -rf vendor/evolution-priv/keys
+  rm -rf vendor/lineage-priv/keys
 fi
 echo "Cloning fresh signing keys..."
-git clone https://github.com/droidcore/private_key.git -b main vendor/evolution-priv/keys
+git clone https://github.com/droidcore/private_key.git -b main vendor/lineage-priv/keys
 
 # Always back to root at the end
 if command -v croot &>/dev/null; then
