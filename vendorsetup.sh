@@ -3,7 +3,7 @@
 # Vendor (fresh clone)
 echo "Cloning vendor tree..."
 rm -rf vendor/xiaomi/peridot
-git clone -b lineage-23.0 https://github.com/droidcore/vendor_xiaomi_peridot_blu.git vendor/xiaomi/peridot
+git clone -b lineage-23.0 https://github.com/ryznstk/proprietary_vendor_xiaomi_peridot.git vendor/xiaomi/peridot
 
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
@@ -46,6 +46,12 @@ git clone -b lineage-23.1 https://github.com/sm8635-dev/packages_apps_KProfiles.
 echo "Cloning Gamebar tree..."
 rm -rf packages/apps/GameBar
 git clone https://github.com/droidcore/packages_apps_GameBar.git packages/apps/GameBar
+
+rm -rf device/qcom/sepolicy_vndr/sm8650
+git clone https://github.com/ryznstk/android_device_qcom_sepolicy_vndr.git device/qcom/sepolicy_vndr/sm8650
+
+rm -rf system/sepolicy
+git clone https://github.com/ryznstk/android_system_sepolicy.git system/sepolicy
 
 # FastCharge (fresh clone)
 echo "Cloning FastCharge..."
