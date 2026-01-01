@@ -32,9 +32,10 @@ AB_OTA_PARTITIONS := \
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv9-a
+TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_VARIANT := cortex-a76
+TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := kryo300
 
 # Audio
 $(call soong_config_set, android_hardware_audio, run_64bit, true)
@@ -55,19 +56,6 @@ TARGET_USES_QCOM_MM_AUDIO := true
 TARGET_PROVIDES_AUDIO_HAL := true
 TARGET_PROVIDES_LIBAGM := true
 TARGET_PROVIDES_LIBAR_PAL := true
-
-# ART/VDEX/ODEX
-WITH_DEXPREOPT := true
-DEX_PREOPT_DEFAULT := generate-vdex-and-image
-WITH_DEXPREOPT_DEBUG_INFO := false
-
-# ART
-ifeq ($(TARGET_BUILD_VARIANT),user)
-ART_BUILD_TARGET_NDEBUG := true
-ART_BUILD_TARGET_DEBUG := false
-ART_BUILD_HOST_NDEBUG := true
-ART_BUILD_HOST_DEBUG := false
-endif
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := peridot
@@ -131,9 +119,6 @@ BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     swinfo.fingerprint=peridot:$(LINEAGE_VERSION) \
     mtdoops.fingerprint=peridot:$(LINEAGE_VERSION)
-
-BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-BOARD_KERNEL_CMDLINE += rcu_nocbs=all rcutree.enable_rcu_lazy=1
 
 BOARD_BOOTCONFIG := \
     androidboot.console=0 \
