@@ -47,12 +47,6 @@ echo "Cloning Gamebar tree..."
 rm -rf packages/apps/GameBar
 git clone https://github.com/droidcore/packages_apps_GameBar.git packages/apps/GameBar
 
-rm -rf device/qcom/sepolicy_vndr/sm8650
-git clone https://github.com/ryznstk/android_device_qcom_sepolicy_vndr.git device/qcom/sepolicy_vndr/sm8650
-
-rm -rf system/sepolicy
-git clone https://github.com/ryznstk/android_system_sepolicy.git system/sepolicy
-
 # FastCharge (fresh clone)
 echo "Cloning FastCharge..."
 rm -rf packages/apps/FastCharge

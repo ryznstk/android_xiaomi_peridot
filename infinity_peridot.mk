@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2024 The LineageOS Project
+# Copyright (C) 2024 The InfinityOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,13 +8,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common InfinityOS stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := lineage_peridot
+PRODUCT_NAME := infinity_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -26,7 +26,7 @@ PRODUCT_SYSTEM_DEVICE := peridot
 # Flags
 TARGET_BUILD_APERTURE_CAMERA := false
 TARGET_DISABLE_EPPE := true
-# Axion
+# Infinity
 WITH_GMS := true
 TARGET_OPTIMIZED_DEXOPT := true
 TARGET_HAS_UDFPS := true
@@ -36,23 +36,8 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_ENABLE_BLUR := true
 
-AXION_CAMERA_REAR_INFO := 50,8
-AXION_CAMERA_FRONT_INFO := 20
-AXION_MAINTAINER := BLU
-AXION_PROCESSOR := Snapdragon_8s_Gen_3
-AXION_CPU_SMALL_CORES := 0,1,2
-AXION_CPU_BIG_CORES := 3,4,5,6,7
-AXION_CPU_SYS_BG := 0-3
-AXION_CPU_BG := 0-2
-AXION_CPU_FG := 0-7
-AXION_CPU_LIMIT_BG := 0-2
-AXION_CPU_UNLIMIT_UI := 0-7
-AXION_CPU_LIMIT_UI := 0-5
-AXION_CPU_DISPLAY := 6-7
-TARGET_INCLUDES_LOS_PREBUILTS := true
-GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
-GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
-TARGET_NEEDS_DOZE_FIX := true
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := BLU
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.207.0.VNPMIXM release-keys" \
