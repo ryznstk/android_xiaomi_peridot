@@ -45,6 +45,10 @@ GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
 GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
 TARGET_NEEDS_DOZE_FIX := true
 
+# Performance Mode
+PERF_GOV_SUPPORTED := true
+PERF_DEFAULT_GOV := walt
+
 PRODUCT_NAME := lineage_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
