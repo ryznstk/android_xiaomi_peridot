@@ -37,6 +37,11 @@ echo "Cloning Viper4Android tree..."
 rm -rf packages/apps/ViPER4AndroidFX
 git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages/apps/ViPER4AndroidFX
 
+# Packages Apps Settings
+echo "Cloning Custom Apps Settings tree..."
+rm -rf packages/apps/Settings
+git clone https://github.com/droidcore/packages_apps_Settings.git packages/apps/Settings
+
 # KProfiles (fresh clone)
 echo "Cloning KProfiles..."
 rm -rf packages/apps/KProfiles
