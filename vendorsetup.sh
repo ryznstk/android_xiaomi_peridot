@@ -55,6 +55,7 @@ git clone https://github.com/ryznstk/android_system_sepolicy.git system/sepolicy
 
 rm -rf packages/apps/FaceUnlock
 git clone https://github.com/AxionAOSP/android_packages_apps_AxFaceUnlock.git packages/apps/FaceUnlock
+
 # FastCharge (fresh clone)
 echo "Cloning FastCharge..."
 rm -rf packages/apps/FastCharge
