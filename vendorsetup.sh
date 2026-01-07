@@ -40,7 +40,7 @@ git clone https://github.com/TogoFire/packages_apps_ViPER4AndroidFX.git packages
 # KProfiles (fresh clone)
 echo "Cloning KProfiles..."
 rm -rf packages/apps/KProfiles
-git clone -b lineage-23.1 https://github.com/sm8635-dev/packages_apps_KProfiles.git packages/apps/KProfiles
+git clone https://github.com/droidcore/packages_apps_KProfiles.git packages/apps/KProfiles
 
 # Gamebar
 echo "Cloning Gamebar tree..."
