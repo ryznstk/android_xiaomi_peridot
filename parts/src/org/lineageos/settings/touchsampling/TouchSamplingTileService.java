@@ -135,7 +135,7 @@ public class TouchSamplingTileService extends TileService {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction("org.lineageos.settings.touchsampling.ACTION_UPDATE_TILE");
-        registerReceiver(mTileUpdateReceiver, filter);
+        registerReceiver(mTileUpdateReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     /**
