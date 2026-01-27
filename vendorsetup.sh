@@ -8,7 +8,7 @@ git clone -b lineage-23.0 https://github.com/droidcore/vendor_xiaomi_peridot_blu
 # Kernel source (fresh clone)
 echo "Cloning kernel source tree..."
 rm -rf kernel/xiaomi/sm8635
-git clone -b nonksu --depth 1 https://github.com/ryznstk/android_kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
+git clone -b test --depth 1 https://github.com/ryznstk/android_kernel_xiaomi_sm8635.git kernel/xiaomi/sm8635
 rm -rf kernel/xiaomi/sm8635-modules
 git clone -b lineage-23.0 --depth 1 https://github.com/ryznstk/android_kernel_xiaomi_sm8635-modules.git kernel/xiaomi/sm8635-modules
 
@@ -54,6 +54,8 @@ git clone https://github.com/ryznstk/android_system_sepolicy.git system/sepolicy
 # FastCharge (fresh clone)
 echo "Cloning FastCharge..."
 rm -rf packages/apps/FastCharge
+
+rm -rf vendor/evolution-priv/keys
 
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then
