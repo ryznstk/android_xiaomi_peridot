@@ -47,6 +47,7 @@ TARGET_INCLUDES_LOS_PREBUILTS := false
 GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
 GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
 TARGET_NEEDS_DOZE_FIX := true
+TARGET_INCLUDE_VIPERFX := false
 
 # Performance Mode
 PERF_GOV_SUPPORTED := true
